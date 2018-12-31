@@ -336,11 +336,11 @@ foreach(INC_DIR ${CERES_LIBRARY_PUBLIC_DEPENDENCIES_INCLUDE_DIRS})
   target_include_directories(ceres PUBLIC ${INC_DIR})
 endforeach()
 
-install(TARGETS ceres
-        EXPORT  CeresExport
-        RUNTIME DESTINATION bin
-        LIBRARY DESTINATION lib${LIB_SUFFIX}
-        ARCHIVE DESTINATION lib${LIB_SUFFIX})
+# install(TARGETS ceres
+#         EXPORT  CeresExport
+#         RUNTIME DESTINATION bin
+#         LIBRARY DESTINATION lib${LIB_SUFFIX}
+#         ARCHIVE DESTINATION lib${LIB_SUFFIX})
 
 if (BUILD_TESTING AND GFLAGS)
   add_library(gtest gmock_gtest_all.cc gmock_main.cc)
